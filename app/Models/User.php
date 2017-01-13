@@ -1,6 +1,6 @@
 <?php
 
-namespace finance;
+namespace finance\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
