@@ -15,6 +15,7 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->increments('id');
+            $table->foreign('customer_id') ->references('id')->on('customers')->onDelete('cascade');
             $table->enum('choices', ['E', 'S'])->nullable();
             $table->date('date')->nullable();
             $table->float('amount', 8, 2)->nullable();
