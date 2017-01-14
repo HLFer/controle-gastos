@@ -77,6 +77,9 @@
                 </div>
             </div>
         </nav>
+        <div class="container">
+            @include('elements.alerts')
+        </div>
 
         @yield('content')
     </div>
