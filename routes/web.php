@@ -17,7 +17,7 @@ Route::group(['middleware' => 'auth'], function (){
 
 
     // Users Routes...
-    Route::resource('users', 'UserController');
+    Route::resource('users', 'UsersController');
 
 
 });

@@ -9,7 +9,7 @@ use finance\Repositories\UserRepository;
 use Illuminate\Support\Facades\Session;
 
 
-class UserController extends Controller
+class UsersController extends Controller
 {
     /**
      * @var UserRepository
