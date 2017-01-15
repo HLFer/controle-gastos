@@ -5,18 +5,18 @@ namespace finance\Http\Controllers;
 use finance\Http\Requests\User\CreateUserRequest;
 use finance\Http\Requests\User\UpdateUserRequest;
 use finance\Models\User;
-use finance\Repositories\UsersRepository;
+use finance\Repositories\UserRepository;
 use Illuminate\Support\Facades\Session;
 
 
 class UserController extends Controller
 {
     /**
-     * @var UsersRepository
+     * @var UserRepository
      */
     protected $repository;
 
-    public function __construct(UsersRepository $repository)
+    public function __construct(UserRepository $repository)
     {
         $this->repository = $repository;
     }

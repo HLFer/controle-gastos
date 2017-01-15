@@ -4,7 +4,7 @@ namespace finance\Repositories;
 
 use finance\Models\User;
 
-class UsersRepository extends CrudRepository
+class UserRepository extends CrudRepository
 {
 
     protected $modelClass = User::class;
