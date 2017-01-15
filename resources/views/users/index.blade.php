@@ -12,7 +12,7 @@
                                 <tr>
                                     <th>Nome</th>
                                     <th>Email</th>
-                                    <th class="col-md-3">Ações</th>
+                                    <th class="col-md-1">Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -20,16 +20,11 @@
                                     <tr>
                                         <td>{{$user->name}}</td>
                                         <td>{{$user->email}}</td>
-                                        <td>
+                                        <td class="actions">
                                             {!! Form::open(['method' => 'Delete', 'route' => ['users.destroy', $user->id]]) !!}
-                                                <div class="btn-group  btn-group-sm" role="group" aria-label="">
-                                                    {{ link_to_route('users.show', 'Visualizar', ['id' => $user->id],  ['class' => 'btn btn-default']) }}
-                                                    {{ link_to_route('users.edit', 'Editar', ['id' => $user->id],  ['class' => 'btn btn-default']) }}
-                                                    {!! Form::submit('Excluir', [
-                                                        'class' => 'btn btn-default',
-                                                        'onClick' => 'return confirm("Tem certeza que deseja excluir este usuário?")'
-                                                    ]) !!}
-                                                </div>
+                                                <a href="{{ route('users.show', ['id' => $user->id]) }}" class="btn btn-default btn-xs"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                <a href="{{ route('users.edit', ['id' => $user->id]) }}" class="btn btn-default btn-xs"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                                <button type="submit" onclick="return confirm(&quot;Tem certeza que deseja excluir este usuário?&quot;)" class="btn btn-danger btn-xs"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                             {!! Form::close() !!}
                                         </td>
                                     </tr>

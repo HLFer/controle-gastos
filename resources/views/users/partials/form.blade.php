@@ -50,9 +50,10 @@
     </div>
 </div>
 
-<div class="form-group">
-    <div class="col-md-6 col-md-offset-4">
-        {{ link_to_route('users.index', $title = 'Cancelar', $parameters = [], $attributes = ['class' => 'btn btn-default']) }}
+<div class="col-md-12">
+    <hr>
+    <div class="text-right">
+        <a href="{{ route('users.index') }}" class="btn btn-default">Cancelar</a>
         {{Form::submit('Salvar', ['class' => 'btn btn-primary']) }}
     </div>
 </div>
