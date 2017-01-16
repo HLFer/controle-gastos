@@ -19,8 +19,8 @@
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-                <li>{{ link_to_route('users.index', 'Clientes') }}</li>
-                <li>{{ link_to_route('users.index', 'Carnê da Felicidade') }}</li>
+                <li>{{ link_to_route('customers.index', 'Clientes') }}</li>
+                <li>{{ link_to_route('users.index', 'Controle Financeiro') }}</li>
                 <li>{{ link_to_route('users.index', 'Usuários') }} </li>
             </ul>
 

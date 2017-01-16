@@ -5,7 +5,12 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading"><h4>Usuários</h4></div>
+                    <div class="panel-heading">
+                        <h4>
+                            Usuários
+                            <a href="{{ route('users.create') }}" class="btn btn-primary btn btn-sm pull-right">Adicionar Usuário</a>
+                        </h4>
+                    </div>
                     <div class="panel-body">
                         <table class="table table-hover">
                             <thead>
