@@ -28,21 +28,13 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function getCreatedAtAttribute($value)
+    protected function getCreatedAtAttribute($value)
     {
-        return $this->getFormatDate($value);
+        return $this->FormatDateTimeForView($value);
     }
 
-    public function getUpdatedAtAttribute($value)
+    protected function getUpdatedAtAttribute($value)
     {
-        return $this->getFormatDate($value);
-    }
-
-    protected function getFormatDate($value)
-    {
-        if (!is_null($value))
-            return Carbon::parse($value)->format('d/m/Y - H:m');
-
-        return $value;
+        return $this->FormatDateTimeForView($value);
     }
 }
