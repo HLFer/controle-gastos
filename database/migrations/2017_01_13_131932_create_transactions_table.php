@@ -16,7 +16,7 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('customer_id')->unsigned();
-            $table->enum('choices', ['E', 'S'])->default('E');
+            $table->enum('type', ['E', 'S'])->default('E');
             $table->date('date');
             $table->float('amount', 8, 2);
             $table->text('description')->nullable();
