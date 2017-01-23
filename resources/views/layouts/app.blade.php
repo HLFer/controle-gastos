@@ -31,5 +31,8 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script src="/js/jquery.inputmask.bundle.min.js"></script>
+    <script src="/js/mask.js"></script>
+
 </body>
 </html>
