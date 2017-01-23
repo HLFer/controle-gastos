@@ -30,7 +30,7 @@ trait ReadRecords
      */
     public function pluck($column, $key = null)
     {
-        return $this->newQuery()->lists($column, $key);
+        return $this->newQuery()->pluck($column, $key);
     }
 
     /**
