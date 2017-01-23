@@ -21,6 +21,11 @@ Route::group(['middleware' => 'auth'], function (){
     // Customers Routes...
     Route::resource('customers', 'CustomersController');
 
+    // Transactions Routes...
+    Route::resource('transactions', 'TransactionsController', ['except' => [
+        'create', 'show', 'edit', 'update'
+    ]]);
+
 
 });
 
