@@ -27,7 +27,7 @@
 <div class="form-group{{ $errors->has('document') ? ' has-error' : '' }}">
     {!! Form::label('document', 'CPF', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-        {!! Form::text('document', null, ['class' => 'form-control']) !!}
+        {!! Form::text('document', null, ['class' => 'form-control cpf']) !!}
 
         @if ($errors->has('document'))
             <span class="help-block">
@@ -40,7 +40,7 @@
 <div class="form-group{{ $errors->has('birth_date') ? ' has-error' : '' }}">
     {!! Form::label('birth_date', 'Data de Aniversário', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-        {!! Form::text('birth_date', null, ['class' => 'form-control']) !!}
+        {!! Form::text('birth_date', null, ['class' => 'form-control date']) !!}
 
         @if ($errors->has('birth_date'))
             <span class="help-block">
