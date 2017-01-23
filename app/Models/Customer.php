@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: george
+ * Date: 13/01/17
+ * Time: 14:51
+ */
 
 namespace finance\Models;
 
@@ -29,7 +35,7 @@ class Customer extends Model
 
     public function transactions()
     {
-        return $this->hasMany('Transaction');
+        return $this->hasMany('finance\Models\Transaction');
     }
 
     protected function setBirthDateAttribute($value)
