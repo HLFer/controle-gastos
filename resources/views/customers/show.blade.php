@@ -19,6 +19,14 @@
                                     <td>{{ $customer->email }}</td>
                                 </tr>
                                 <tr>
+                                    <th>Telefone </th>
+                                    <td>{{ $customer->phone }}</td>
+                                </tr>
+                                <tr>
+                                    <th>RG </th>
+                                    <td>{{ $customer->identity }}</td>
+                                </tr>
+                                <tr>
                                     <th>CPF </th>
                                     <td>{{ $customer->document }}</td>
                                 </tr>
@@ -27,6 +35,10 @@
                                     <td>{{ $customer->birth_date }}</td>
                                 </tr>
                                 <tr>
+                                <tr>
+                                    <th>Endereço </th>
+                                    <td>{{ $customer->address }}</td>
+                                </tr>
                                     <th>Criado em </th>
                                     <td>{{ $customer->created_at }}</td>
                                 </tr>

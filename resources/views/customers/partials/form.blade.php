@@ -24,6 +24,32 @@
     </div>
 </div>
 
+<div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
+    {!! Form::label('phone', 'Telefone', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+        {!! Form::text('phone', null, ['class' => 'form-control phone']) !!}
+
+        @if ($errors->has('phone'))
+            <span class="help-block">
+                <strong>{{ $errors->first('phone') }}</strong>
+            </span>
+        @endif
+    </div>
+</div>
+
+<div class="form-group{{ $errors->has('identity') ? ' has-error' : '' }}">
+    {!! Form::label('identity', 'RG', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+        {!! Form::text('identity', null, ['class' => 'form-control']) !!}
+
+        @if ($errors->has('identity'))
+            <span class="help-block">
+                <strong>{{ $errors->first('identity') }}</strong>
+            </span>
+        @endif
+    </div>
+</div>
+
 <div class="form-group{{ $errors->has('document') ? ' has-error' : '' }}">
     {!! Form::label('document', 'CPF', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
@@ -45,6 +71,19 @@
         @if ($errors->has('birth_date'))
             <span class="help-block">
                 <strong>{{ $errors->first('birth_date') }}</strong>
+            </span>
+        @endif
+    </div>
+</div>
+
+<div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
+    {!! Form::label('birth_date', 'Endereço', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+        {!! Form::textarea('address', null, ['rows' => 2, 'class' => 'form-control']) !!}
+
+        @if ($errors->has('address'))
+            <span class="help-block">
+                <strong>{{ $errors->first('address') }}</strong>
             </span>
         @endif
     </div>
