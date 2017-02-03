@@ -22,8 +22,10 @@
 </head>
 <body>
 <div id="app">
-    <div class="clearfix"></div>
+    @include('elements.nav')
+
     @include('elements.alerts')
+
     @yield('content')
 </div>
 
