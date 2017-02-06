@@ -2,9 +2,7 @@
 
 namespace finance\Http\Requests\Customer;
 
-
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Http\Request;
 
 class UpdateCustomerRequest extends FormRequest
 {
