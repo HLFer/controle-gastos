@@ -2,7 +2,6 @@
 
 namespace finance\Models;
 
-
 use finance\Traits\FormatDate;
 use Illuminate\Database\Eloquent\Model;
 
