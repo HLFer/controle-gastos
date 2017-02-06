@@ -106,14 +106,10 @@ class UsersController extends Controller
                 'type' => 'success',
                 'message' => 'Usuário removido com sucesso.'
             ]);
-            /*session()->session()->flash('alert', [
-                'type' => 'success',
-                'message' => 'Usuário cadastrato com sucesso.'
-            ]);*/
         }else{
             Session::flash('alert', [
                     'type' => 'error',
-                    'message' => 'Usuário não pode ser salvo. Tente novamente.'
+                    'message' => 'Usuário não pode ser removido. Tente novamente.'
             ]);
         }
         return redirect('users');

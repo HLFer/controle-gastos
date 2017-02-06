@@ -49,7 +49,7 @@ class RoutesController extends Controller
 
         Session::flash('alert', [
             'type' => 'success',
-            'message' => 'Rota cadastrata com sucesso.'
+            'message' => 'Rota cadastrada com sucesso.'
         ]);
 
         return redirect('routes');
@@ -97,7 +97,7 @@ class RoutesController extends Controller
         }else{
             Session::flash('alert', [
                 'type' => 'error',
-                'message' => 'Rota não pode ser excluída. Tente novamente.'
+                'message' => 'Rota não pode ser removida. Tente novamente.'
             ]);
         }
         return redirect('routes');

@@ -4,18 +4,14 @@ namespace finance\Http\Controllers;
 
 use finance\Http\Requests\Customer\CreateCustomerRequest;
 use finance\Http\Requests\Customer\UpdateCustomerRequest;
-use finance\Http\Requests\User\CreateUserRequest;
-use finance\Http\Requests\User\UpdateUserRequest;
-use finance\Models\User;
 use finance\Repositories\CustomerRepository;
-use finance\Repositories\UserRepository;
 use Illuminate\Support\Facades\Session;
 
 
 class CustomersController extends Controller
 {
     /**
-     * @var UserRepository
+     * @var CustomerRepository
      */
     protected $repository;
 
@@ -24,13 +20,15 @@ class CustomersController extends Controller
         $this->repository = $repository;
     }
 
-    public function index(){
+    public function index()
+    {
         $customers = $this->repository->getAll();
 
         return view('customers.index', ['customers' => $customers]);
     }
 
-    public function show($id = null){
+    public function show($id = null)
+    {
         $customer = $this->repository->findByID($id, false);
 
         if($customer){
@@ -99,7 +97,7 @@ class CustomersController extends Controller
         }else{
             Session::flash('alert', [
                 'type' => 'error',
-                'message' => 'Cliente não pode ser excluído. Tente novamente.'
+                'message' => 'Cliente não pode ser removido. Tente novamente.'
             ]);
         }
         return redirect('customers');

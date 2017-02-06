@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Session;
 class TransactionsController extends Controller
 {
     /**
-     * @var UserRepository
+     * @var TransactionRepository
      */
     protected $repository;
 
@@ -20,7 +20,8 @@ class TransactionsController extends Controller
         $this->repository = $repository;
     }
 
-    public function index(CustomerRepository $customerRepository){
+    public function index(CustomerRepository $customerRepository)
+    {
         $types = $this->repository->types();
 
         $transactions = $this->repository->listAll();
@@ -72,7 +73,7 @@ class TransactionsController extends Controller
         }else{
             Session::flash('alert', [
                 'type' => 'error',
-                'message' => 'Transação não pode ser excluída. Tente novamente.'
+                'message' => 'Transação não pode ser removida. Tente novamente.'
             ]);
         }
         return redirect('transactions');
