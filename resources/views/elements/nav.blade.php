@@ -23,6 +23,7 @@
                 <ul class="nav navbar-nav">
                     <li>{{ link_to_route('customers.index', 'Clientes') }}</li>
                     <li>{{ link_to_route('transactions.index', 'Controle Financeiro') }}</li>
+                    <li>{{ link_to_route('routes.index', 'Rotas') }} </li>
                     <li>{{ link_to_route('users.index', 'Usuários') }} </li>
                 </ul>
 

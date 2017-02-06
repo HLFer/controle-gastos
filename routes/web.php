@@ -26,6 +26,9 @@ Route::group(['middleware' => 'auth'], function (){
         'create', 'show', 'edit', 'update'
     ]]);
 
+    // Routes(trekking) Routes...
+    Route::resource('routes', 'RoutesController');
+
 
 });
 
