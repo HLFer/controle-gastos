@@ -27,7 +27,7 @@ class CreateTransactionRequest extends FormRequest
             'customer_id' => 'required|integer',
             'type' => 'required',
             'date' => 'data',
-            'amount' => 'required',
+            'amount' => 'required|regex:/^\d+([,]\d{1,2})?$/',
         ];
     }
 
@@ -42,7 +42,7 @@ class CreateTransactionRequest extends FormRequest
             'date' => 'Data inválida',
 
             'amount.required' => 'O valor é obrigatório',
-            'amount.numeric' => 'Valor inválido',
+            'amount.regex' => 'Valor inválido',
 
         ];
     }
