@@ -30,7 +30,7 @@
                                             {!! Form::open(['method' => 'Delete', 'route' => ['customers.destroy', $customer->id]]) !!}
                                                 <a href="{{ route('customers.show', ['id' => $customer->id]) }}" class="btn btn-default btn-xs"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                                 <a href="{{ route('customers.edit', ['id' => $customer->id]) }}" class="btn btn-default btn-xs"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                                <button type="submit" onclick="return confirm(&quot;Tem certeza que deseja excluir este usuário?&quot;)" class="btn btn-danger btn-xs"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                <button type="submit" onclick="return confirm(&quot;Tem certeza que deseja excluir este cliente?&quot;)" class="btn btn-danger btn-xs"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                             {!! Form::close() !!}
                                         </td>
                                     </tr>

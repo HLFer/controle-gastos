@@ -35,10 +35,10 @@
                                     <td>{{ $customer->birth_date }}</td>
                                 </tr>
                                 <tr>
-                                <tr>
                                     <th>Endereço </th>
                                     <td>{{ $customer->address }}</td>
                                 </tr>
+                                <tr>
                                     <th>Criado em </th>
                                     <td>{{ $customer->created_at }}</td>
                                 </tr>

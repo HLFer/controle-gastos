@@ -129,7 +129,7 @@
                                             <td class="hidden-xs hidden-sm"><strong>{{ $transaction->description }}</strong></td>
                                             <td class="actions">
                                                 {!! Form::open(['method' => 'Delete', 'route' => ['transactions.destroy', $transaction->id]]) !!}
-                                                <button type="submit" onclick="return confirm(&quot;Tem certeza que deseja excluir este usuário?&quot;)" class="btn btn-danger btn-xs"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                <button type="submit" onclick="return confirm(&quot;Tem certeza que deseja excluir esta transação?&quot;)" class="btn btn-danger btn-xs"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                                 {!! Form::close() !!}
                                             </td>
                                         </tr>
