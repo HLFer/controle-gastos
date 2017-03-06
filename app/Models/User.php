@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace finance\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -26,4 +26,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    protected function getCreatedAtAttribute($value)
+    {
+        return $this->FormatDateTimeForView($value);
+    }
+
+    protected function getUpdatedAtAttribute($value)
+    {
+        return $this->FormatDateTimeForView($value);
+    }
 }
